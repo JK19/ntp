@@ -114,5 +114,5 @@ Timezone examples:
     ntp -s 3.es.pool.ntp.org -tz Europe/Madrid
 
 ## License
-* MIT
+* [MIT](LICENSE)
 
