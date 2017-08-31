@@ -112,7 +112,8 @@ Timezone examples:
 * America/New_York
 * Europe/Moscow
 
-    ntp -s 3.es.pool.ntp.org -tz Europe/Madrid
+
+		ntp -s 3.es.pool.ntp.org -tz Europe/Madrid
 
 ## License
 * [MIT](LICENSE)
