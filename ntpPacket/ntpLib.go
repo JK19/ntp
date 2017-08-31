@@ -70,8 +70,6 @@ func (p ntpPacket) Getstratum() uint8 {
 	return uint8(p[1])
 }
 
-//GetPollInterval translates ntp data in log2 (log base 2) seconds format to
-//decimal seconds
 func (p ntpPacket) GetPollInterval() time.Duration {
 	return log2ToDuration(p[2])
 }
@@ -80,7 +78,7 @@ func (p ntpPacket) Getprecision() time.Duration {
 	return log2ToDuration(p[3])
 }
 
-func (p ntpPacket) GetRootDelay() time.Duration { //specs from rfc5905
+func (p ntpPacket) GetRootDelay() time.Duration {
 
 	secRaw := int16((uint16(p[4]) << 8) | uint16(p[5]))
 	fractionRaw := uint16((uint16(p[6]) << 8) | uint16(p[7]))
@@ -96,7 +94,7 @@ func (p ntpPacket) GetRootDelay() time.Duration { //specs from rfc5905
 	return ret
 }
 
-func (p ntpPacket) GetRootDispersion() time.Duration { //specs from rfc5905
+func (p ntpPacket) GetRootDispersion() time.Duration {
 
 	secRaw := int16((uint16(p[8]) << 8) | uint16(p[9]))
 	fractionRaw := uint16((uint16(p[10]) << 8) | uint16(p[11]))
