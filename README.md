@@ -105,7 +105,7 @@ Defaults:
 ```
 
 The timezones follow the [IANA timezone database](https://www.iana.org/time-zones) format [[wikipedia]](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
-Timezone exmples:
+Timezone examples:
 
 * Europe/Madrid
 * America/New_York
